@@ -1,6 +1,15 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import meter1 from "../assets/img/meter1.png";
+import meter2 from "../assets/img/meter2.png";
+import meter3 from "../assets/img/meter3.png";
+import meter4 from "../assets/img/meter4.png";
+import meter5 from "../assets/img/meter5.png";
+import meter6 from "../assets/img/meter6.png";
+import meter7 from "../assets/img/meter7.png";
+import meter8 from "../assets/img/meter8.png";
+import meter9 from "../assets/img/meter9.png";
+import meter10 from "../assets/img/meter10.png";
+import meter11 from "../assets/img/meter11.png";
+import meter12 from "../assets/img/meter12.png";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
@@ -35,23 +44,55 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>I worked closely with software development in full stack application.<br></br> I have a good programming background in Python, Java, and Java Script development.<br></br> I am interested in algorithms, artificial intelligence, and data structures.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <h5>Python</h5>
                             </div>
                             <div className="item">
                                 <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
+                                <h5>C</h5>
                             </div>
                             <div className="item">
                                 <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
+                                <h5>Java</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter4} alt="Image" />
+                                <h5>ReactJS</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter5} alt="Image" />
+                                <h5>AngularJS</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter6} alt="Image" />
+                                <h5>MySQL</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter7} alt="Image" />
                                 <h5>Web Development</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter8} alt="Image" />
+                                <h5>Mobile Development</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter9} alt="Image" />
+                                <h5>Data Analysis</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter10} alt="Image" />
+                                <h5>Interpersonal Skill</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter11} alt="Image" />
+                                <h5>Communication Skill</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter12} alt="Image" />
+                                <h5>Leadership Skill</h5>
                             </div>
                         </Carousel>
                     </div>
