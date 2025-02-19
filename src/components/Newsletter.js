@@ -5,8 +5,9 @@ export const Newsletter = () => {
   const [showAlert, setShowAlert] = useState(false);
 
   const handleDownload = () => {
+    const pdfUrl = "https://jramaegallos.github.io/portfolio/Gallos_CV.pdf"; // Use full URL
     const link = document.createElement("a");
-    link.href = `${process.env.PUBLIC_URL}/Gallos_CV.pdf`; // Ensure the file is in the public folder
+    link.href = pdfUrl;
     link.download = "Gallos_CV.pdf";
     document.body.appendChild(link);
     link.click();
