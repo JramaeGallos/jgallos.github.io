@@ -1,46 +1,49 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 
-export const Newsletter = ({ status, message, onValidated }) => {
-  const [email, setEmail] = useState('');
 
-  useEffect(() => {
-    if (status === 'success') clearFields();
-  }, [status])
+export const Newsletter = () => {
+  const [showAlert, setShowAlert] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleDownload = (e) => {
     e.preventDefault();
-    email &&
-    email.indexOf("@") > -1 &&
-    onValidated({
-      EMAIL: email
-    })
-  }
+    const link = document.createElement("a");
+    link.href = "/Gallos_CV.pdf"; // Ensure cv.pdf is in the public folder
+    link.download = "Gallos_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 
-  const clearFields = () => {
-    setEmail('');
-  }
+    // Show alert notification
+    setShowAlert(true);
+
+    // Hide alert after 3 seconds
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 3000);
+  };
 
   return (
-      <Col lg={12}>
-        <div className="newsletter-bx wow slideInUp">
-          <Row>
-            <Col lg={12} md={6} xl={5}>
-              <h3>Subscribe to our Newsletter<br></br> & Never miss latest updates</h3>
-              {status === 'sending' && <Alert>Sending...</Alert>}
-              {status === 'error' && <Alert variant="danger">{message}</Alert>}
-              {status === 'success' && <Alert variant="success">{message}</Alert>}
-            </Col>
-            <Col md={6} xl={7}>
-              <form onSubmit={handleSubmit}>
-                <div className="new-email-bx">
-                  <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email Address" />
-                  <button type="submit">Submit</button>
-                </div>
-              </form>
-            </Col>
-          </Row>
-        </div>
-      </Col>
-  )
-}
+    <Col lg={12}>
+      <div className="newsletter-bx wow slideInUp">
+        {/* Notification Alert */}
+        {showAlert && (
+          <Alert variant="success" className="download-alert">
+            CV Downloaded Successfully!
+          </Alert>
+        )}
+
+        <Row className="newsletter-content">
+          <Col lg={12} className="newsletter-text">
+            <h3>Know more about me by looking at my CV</h3>
+          </Col>
+          <Col lg={12} className="newsletter-button">
+            <form onSubmit={handleDownload}>
+              <button type="submit" className="download-btn">Download CV</button>
+            </form>
+          </Col>
+        </Row>
+      </div>
+    </Col>
+  );
+};
