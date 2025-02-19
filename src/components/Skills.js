@@ -47,6 +47,30 @@ export const Skills = () => {
                         <p>I worked closely with software development in full stack application.<br></br> I have a good programming background in Python, Java, and Java Script development.<br></br> I am interested in algorithms, artificial intelligence, and data structures.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
+                                <img src={meter7} alt="Image" />
+                                <h5>Web Development</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter8} alt="Image" />
+                                <h5>Mobile Development</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter9} alt="Image" />
+                                <h5>Data Structures</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter10} alt="Image" />
+                                <h5>Interpersonal Skill</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter11} alt="Image" />
+                                <h5>Communication Skill</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter12} alt="Image" />
+                                <h5>Leadership Skill</h5>
+                            </div>
+                            <div className="item">
                                 <img src={meter1} alt="Image" />
                                 <h5>Python</h5>
                             </div>
@@ -70,30 +94,7 @@ export const Skills = () => {
                                 <img src={meter6} alt="Image" />
                                 <h5>MySQL</h5>
                             </div>
-                            <div className="item">
-                                <img src={meter7} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter8} alt="Image" />
-                                <h5>Mobile Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter9} alt="Image" />
-                                <h5>Data Analysis</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter10} alt="Image" />
-                                <h5>Interpersonal Skill</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter11} alt="Image" />
-                                <h5>Communication Skill</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter12} alt="Image" />
-                                <h5>Leadership Skill</h5>
-                            </div>
+                            
                         </Carousel>
                     </div>
                 </div>
