@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 
-
 export const Newsletter = () => {
   const [showAlert, setShowAlert] = useState(false);
 
-  const handleDownload = (e) => {
-    e.preventDefault();
+  const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Gallos_CV.pdf"; // Ensure cv.pdf is in the public folder
+    link.href = `${process.env.PUBLIC_URL}/Gallos_CV.pdf`; // Ensure the file is in the public folder
     link.download = "Gallos_CV.pdf";
     document.body.appendChild(link);
     link.click();
@@ -38,9 +36,9 @@ export const Newsletter = () => {
             <h3>Know more about me by looking at my CV</h3>
           </Col>
           <Col lg={12} className="newsletter-button">
-            <form onSubmit={handleDownload}>
-              <button type="submit" className="download-btn">Download CV</button>
-            </form>
+            <button onClick={handleDownload} className="download-btn">
+              Download CV
+            </button>
           </Col>
         </Row>
       </div>
