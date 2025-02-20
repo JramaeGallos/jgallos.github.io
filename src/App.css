@@ -428,14 +428,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: 0.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 0 55px 0;
 }
-/* .proj-imgbx {
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-  margin-bottom: 24px;
-} */
-
-
 
 
 .proj-imgbx {
@@ -459,11 +451,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: transform 0.3s ease-in-out;
 }
 
-/* .proj-imgbx img.zoomed {
-  transform: scale(1.5);
-  transition: transform 0.5s ease;
-} */
-
 
 .proj-imgbx::before {
   content: "";
@@ -474,9 +461,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 0;
   transition: 0.4s ease-in-out;
 }
-
-
-
 
 
 .proj-imgbx:hover::before {
@@ -516,6 +500,40 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
+
+/* @media (max-width: 1150px) {
+  .proj-imgbx {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 24px;
+  }
+  
+  .proj-imgbx img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .proj-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1151px) {
+  .proj-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .proj-imgbx {
+    max-width: 330px;
+  }
+} */
+
 
 /************ Projects Css ************/
 .contact {
@@ -669,6 +687,60 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 1000;
   text-align: center;
 }
+
+/* Responsive Design */
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+  .newsletter-bx {
+    padding: 40px 20px;
+  }
+
+  /* Stack text and button vertically on small screens */
+  .newsletter-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-text h3 {
+    font-size: 18px;
+    white-space: normal; /* Allows text to wrap on smaller screens */
+    text-align: center;
+  }
+
+  .download-btn {
+    width: 100%; /* Makes button full width */
+    padding: 15px;
+  }
+}
+
+/* Extra Small Screens (Very Small Phones) */
+@media (max-width: 480px) {
+  .newsletter-bx {
+    padding: 30px 15px;
+  }
+
+  .newsletter-text h3 {
+    font-size: 16px;
+  }
+
+  .download-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Large Screens (Desktops) */
+@media (min-width: 1200px) {
+  .newsletter-bx {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; /* Centers horizontally */
+  }
+}
+
+
+
 
 
 .footer img {

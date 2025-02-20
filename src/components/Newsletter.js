@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 
 export const Newsletter = () => {
   const [showAlert, setShowAlert] = useState(false);
+  const pdfUrl = "https://jramaegallos.github.io/portfolio/Gallos_CV.pdf"; // Use full URL
 
   const handleDownload = () => {
-    const pdfUrl = "https://jramaegallos.github.io/portfolio/Gallos_CV.pdf"; // Use full URL
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "Gallos_CV.pdf";
@@ -15,19 +15,21 @@ export const Newsletter = () => {
 
     // Show alert notification
     setShowAlert(true);
-
-    // Hide alert after 3 seconds
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 3000);
   };
+
+  useEffect(() => {
+    if (showAlert) {
+      const timer = setTimeout(() => setShowAlert(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showAlert]);
 
   return (
     <Col lg={12}>
       <div className="newsletter-bx wow slideInUp">
         {/* Notification Alert */}
         {showAlert && (
-          <Alert variant="success" className="download-alert">
+          <Alert variant="success" className="download-alert" aria-live="polite">
             CV Downloaded Successfully!
           </Alert>
         )}
