@@ -540,9 +540,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   padding: 60px 0 200px 0;
 }
+
 .contact img {
   width: 70%;
+  border: 1px solid #FFFFFF; /* Adds a 2px solid black border */
+  border-radius: 5px; /* Optional: Rounds the corners */
 }
+
 .contact h2 {
 	font-size: 45px;
 	font-weight: 700;
